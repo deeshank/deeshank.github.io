@@ -1,0 +1,68 @@
+<script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" type="text/javascript"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
+<div id="mapdiv" style="width: 1000px; height: 500px;"></div>
+<script type="text/javascript">
+var map = AmCharts.makeChart("mapdiv",{
+type: "map",
+theme: "light",
+panEventsEnabled : true,
+backgroundColor : "#34ADC2",
+backgroundAlpha : 1,
+zoomControl: {
+zoomControlEnabled : false
+},
+dataProvider : {
+map : "usaHigh",
+getAreasFromMap : true,
+areas :
+[
+	{
+		"id": "US-CA",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-DE",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-IL",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-MN",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-NJ",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-NV",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-NY",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-OH",
+		"showAsSelected": true
+	},
+	{
+		"id": "US-TX",
+		"showAsSelected": true
+	}
+]
+},
+areasSettings : {
+autoZoom : true,
+color : "#86868A",
+colorSolid : "#35E625",
+selectedColor : "#35E625",
+outlineColor : "#666666",
+rollOverColor : "#DB5929",
+rollOverOutlineColor : "#000000"
+}
+});
+</script>
